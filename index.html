@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height.">
+    <title>PAGASA</title>
+      
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Twitter Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <!-- Orbitron Font -->
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'/>
+    <!-- Roboto Font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'/>  
+  </head>
+  <body>
+      
+    <!-- Pre-load screen -->
+    <div id="loading-screen">
+        <div id="load-icon">
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <img src="img/loading.gif" id="load-icon">
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-8 no-gutter">
+                <!-- title bar/nav bar -->
+                <div id="navbar"> <img src="img/navbar.png"/></div>
+                <!-- advisory ticker -->
+                <div id="ad-ticker">
+                    <span id="ticker">
+                        <font color="#ffffff" size="+3">
+                            <marquee scrollamount="15" id="tick">THUNDERSTORM ADVISORY NO.4 #VIS_PRSD-Iloilo Radar 
+                                Issued at 1:31PM, 27 June 2017
+                                Thunderstorm is affecting over #Iloilo (Igbaras, Leon, Alimodian, Maasin, Lambunao, Anilao, Banate, Barotac Viejo, Lemery) #NegrosOccidental (Sipalay, Hinoba-an) and nearby areas which may persist for 1-2 hours.
+                                All are advised to take precautionary measures against heavy rains, strong winds, lightning and possible flashfloods. Keep monitoring for updates.
+                            </marquee>
+                        </font>
+                    </span>
+                </div>
+                <!-- satellite map -->
+                <div id="map"></div>
+            </div>
+            <div class="col-lg-4 no-gutter">
+                <!-- local radar map -->
+                <div id="radarmap"></div>
+                <!-- info from aws-->
+                <div id="info">
+                    <div class="card" style="width: 100%">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <h3>Quezon City, Metro Manila, Philippines</h3>
+                            </div> 
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-8"><span style="font-size: 18px">As of: 2017-06-28 09:30:00</span></div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><span><img src="img/ico-temp.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>29.23</span><span> ⁰C - </span><span>31.24</span><span> ⁰C</span></div>
+                            <div class="col-sm-2"><span><img src="img/ico-hum.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>53.2%</span></div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><span><img src="img/ico-winddir.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>232</span><span> ⁰</span></div>
+                            <div class="col-sm-2"><span><img src="img/ico-windspd.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>3.2 m/s</span></div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><span><img src="img/ico-solarrad.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>621</span><span> wm²</span></div>
+                            <div class="col-sm-2"><span><img src="img/ico-rain.png" style="width: 100%"></span></div>
+                            <div class="col-sm-3"><span>0 mm</span></div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+  </body>
+    
+    <!--SCRIPTS HERE-->
+    <!-- Google Map API-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe3tmaJfIK61mmGiJtP25qTuVp3HwCuPU&callback=initMap"></script>
+    <!-- Custom Scripts -->
+    <script src="js/script.js" defer></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,5 @@
+ddType application/x-httpd-php .html .htm
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html?$ / [NC,R,L]
