@@ -221,9 +221,12 @@ document.getElementById('tick').stop();
     document.getElementById('tick').start(); 
   });
 
-//set element heights (Map, radarmap, info)
-var body = document.body, html = document.documentElement;
-var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-document.getElementById('map').style.height = height + 'px';
-document.getElementById('radarmap').style.height = (height/2) + 'px';
-document.getElementById('info').style.height = (height/2) + 'px';
+//fullscreen
+window.addEventListener('resize', function(){
+    if( window.innerHeight == screen.height) {
+    // browser is fullscreen
+      document.getElementById("ticker").style.position = "fixed";
+    } else {
+      document.getElementById("ticker").style.position = "absolute"; 
+    }
+});

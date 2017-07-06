@@ -13,12 +13,6 @@ html, body {
 
 .no-js #loading-screen,
 
-#map { 
-    width: 100%;
-    display: block;
-    z-index: -1;
-}
-
 #loading-screen {
   background: white;
   position: fixed;
@@ -39,7 +33,7 @@ html, body {
 }
 
 #ticker {
-    position:fixed;
+    position:absolute;
     bottom: 0;
     font-size: 46px;
     font-weight: 600;
@@ -51,15 +45,23 @@ html, body {
 }
 
 #navbar {
-    width: 75%;
+    width: 100%;
     vertical-align: top;
     position: absolute;
     display: block;
     z-index: 999;
 }
 
+#map { 
+    width: 100%;
+    display: block;
+    height: 100vh;
+    z-index: -1;
+}
+
 #radarmap {
     width: 100%;
+    height: 55vh;
     display: block;
     z-index: -1;
 }
@@ -67,5 +69,11 @@ html, body {
 #info {
     background-color: #242F3E;
     color: white;
+    height: 45vh;
     z-index: 0;
+}
+
+#info img {
+    height: 6vh;
+    width: 6vh;
 }
